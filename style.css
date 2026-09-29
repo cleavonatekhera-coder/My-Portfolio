@@ -1,0 +1,236 @@
+/* ---------- Colors and base ---------- */
+:root {
+  --ink: #172e27;
+  --paper: #f4f5ef;
+  --green: #dce8d8;
+  --coral: #ef704b;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+ 
+a {
+  color: inherit;
+}
+ 
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.1;
+}
+ 
+/* ---------- Header and footer ---------- */
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+ 
+header nav {
+  display: flex;
+  gap: 28px;
+}
+ 
+header nav a {
+  font-size: 14px;
+  text-decoration: none;
+}
+ 
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+ 
+.logo span {
+  color: var(--coral);
+}
+ 
+footer {
+  border-top: 1px solid #d7ddd4;
+}
+ 
+footer p {
+  font-size: 12px;
+}
+ 
+/* ---------- Hero section ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 35px;
+  padding: 55px;
+  background: var(--ink);
+  color: white;
+}
+ 
+.hero img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+ 
+.hero p {
+  max-width: 420px;
+  color: #d1dad3;
+}
+ 
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+ 
+h1 {
+  margin: 22px 0;
+  font-size: 68px;
+}
+ 
+h1 span {
+  color: var(--coral);
+}
+ 
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 13px 17px;
+  background: var(--coral);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+ 
+/* ---------- General section spacing ---------- */
+.section {
+  padding: 90px 0;
+}
+ 
+h2 {
+  margin: 16px 0 36px;
+  font-size: 42px;
+}
+ 
+h2 span {
+  color: var(--coral);
+}
+ 
+/* ---------- Projects grid ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+ 
+.projects article {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d7ddd4;
+}
+ 
+.projects img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+ 
+.projects .eyebrow {
+  margin: 20px 0 8px;
+  color: #52665b;
+}
+ 
+.projects h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+ 
+.projects p {
+  color: #44554e;
+  font-size: 14px;
+}
+ 
+/* ---------- About section ---------- */
+.about {
+  background: var(--green);
+}
+ 
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+ 
+.lead {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: "Space Grotesk", sans-serif;
+}
+ 
+.about p {
+  color: #44554e;
+  font-size: 14px;
+}
+ 
+/* ---------- Contact section ---------- */
+.contact {
+  padding-bottom: 70px;
+}
+ 
+.contact h2 {
+  margin-bottom: 18px;
+}
+ 
+.github {
+  margin-left: 18px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+ 
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+  body {
+    padding: 0 18px;
+  }
+ 
+  header nav {
+    gap: 14px;
+  }
+ 
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+ 
+  .hero img {
+    height: 230px;
+  }
+ 
+  h1 {
+    font-size: 52px;
+  }
+ 
+  .section {
+    padding: 65px 0;
+  }
+ 
+  .projects, .about-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+ 
+  h2 {
+    font-size: 36px;
+  }
+}
